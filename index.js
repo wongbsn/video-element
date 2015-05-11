@@ -231,16 +231,16 @@ var Video = new Class({
 	},
 	play: function() {
 		if (this._readySent && !this.playing) {
-			(this.isYoutube) ? this.playVideo() : this.player.play();
+			(this.isYoutube) ? this.player.playVideo() : this.player.play();
 		}
 	},
 	pause: function() {
 		if (this._readySent && this.playing) {
-			(this.isYoutube) ? this.pauseVideo() : this.player.pause();
+			(this.isYoutube) ? this.player.pauseVideo() : this.player.pause();
 		}
 	},
 	appendTo: function(dom) {
-		this.optison.el = (typeof(dom)=='string') ? document.getElementById(dom) : dom;
+		this.options.el = (typeof(dom)=='string') ? document.getElementById(dom) : dom;
 		this.options.el.appendChild(this.player);
 	},
 	destroy: function() {
